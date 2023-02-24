@@ -1,0 +1,80 @@
+:root {
+  --blueD: #062744;
+  --light: rgb(249, 225, 255);
+  --blue: #0f436e98;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  height: 100vh;
+}
+
+nav {
+  background: transparent;
+  color: var(--light);
+}
+
+.background-img {
+  background-image: url("./images/lightning.avif");
+  background-size: cover;
+  height: 100%;
+}
+
+.card {
+  background-color: var(--blue);
+  color: var(--light);
+}
+
+.cardFiller {
+  background: transparent;
+  color: transparent;
+}
+
+h1 {
+  width: 100%;
+}
+
+.citySearch {
+  display: flex;
+  flex-direction: column;
+}
+
+.historyBtn {
+  padding: 10px;
+  margin: 3px;
+  border-radius: 5px;
+  background-color: #1b66a377;
+  color: var(--light);
+}
+
+.historyBtn:hover {
+  background-color: var(--light);
+  color: var(--blueD);
+}
+
+.formBox {
+  background-color: var(--blue);
+  color: var(--light);
+}
+
+.searchBox {
+  background-color: var(--light);
+  color: var(--blueD);
+}
+
+/* .citySearch:hover {
+  background-color: var(--light);
+  color: var(--blue);
+} */
+
+.test-city {
+  font-size: 24px;
+}
+
+#currentWeather {
+  font-size: 20px;
+}
+
+.card {
+  font-size: 18px;
+}

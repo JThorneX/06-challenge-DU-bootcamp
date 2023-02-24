@@ -1,0 +1,18 @@
+city + coordinates -- retrieve geographical coordinates given a city name
+
+localstorage to store searched cities (able to be clicked from searched list)
+
+form input for city
+
+5 day forecast starting from the next day
+
+display the date with the city name
+display current day weather temp, humidity, wind speed
+
+c2f5d95227e2e73bd8729a9592486c4e
+// q={city name}
+// &appid=c2f5d95227e2e73bd8729a9592486c4e
+
+
+
+00c728b2ec9889aa99a1c18ebb53335d
