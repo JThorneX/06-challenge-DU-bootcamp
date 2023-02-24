@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/style.css" />
+    <title>Los Cuatro Amigos Weather Inc.</title>
+  </head>
+  <body>
+    <div class="background-img">
+      <nav class="navbar">
+        <h1 class="text-center">Los Cuatro Amigos Weather Inc.</h1>
+      </nav>
+      <!-- <p class="test-city"></p> -->
+      <br />
+      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+      <form id="citySearch" class="container-fluid col-12 ms-4">
+        <div class="input-group">
+          <span class="input-group-text formBox" id="basic-addon1"
+            >Enter City:
+          </span>
+          <input
+            id="userCity"
+            type="text"
+            class="form-input p-2 searchBox"
+            placeholder="Ex: Denver"
+            aria-label="Ex: Denver"
+            aria-describedby="basic-addon1"
+          />
+          <button
+            type="submit"
+            class="btn searchBtn searchBox btn-secondary btn-sm"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
+      <br />
+      <div class="container-fluid col-12">
+        <div class="row">
+          <div id="weatherList" class="me-5 pd-3 col-md-3">
+            <ul id="searchHistory" class="citySearch text-start ms-2 p-2">
+              <!-- <button class="historyBtn">Denver</button> -->
+            </ul>
+          </div>
+
+          <div class="ms-5 ps-5 col-md-7">
+            <div
+              class="card d-flex flex-row justify-content-between align-items-center p-3"
+            >
+              <!--alt tag would have to be dynamic-->
+              <div id="currentWeather" class="card-body">
+                <h5 id="curH" class="card-title test-city text-start">City</h5>
+                <p id="curTemp" class="text-start">Temperature:</p>
+                <p id="curWind" class="text-start">Wind Speed:</p>
+                <p id="curHumidity" class="text-start">Humidity:</p>
+              </div>
+              <img
+                id="currentIcon"
+                src="./Assets/icons/sun vector.png"
+                height="150px"
+                width="150px"
+                class="weather-img"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="5day-forecast container-fluid text-center col-12">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <div class="row g-1 col-md-10">
+              <div class="col">
+                <div class="card p-2">
+                  <img
+                    id="day1icon"
+                    src="./Assets/icons/sun vector.png"
+                    height="50px"
+                    width="50px"
+                    class="weather-img"
+                    alt="..."
+                  />
+                  <!--icon-->
+                  <div class="card-body-day1">
+                    <h5 id="day1date" class="card-title test-city text-start">
+                      City
+                    </h5>
+                    <p id="day1temp" class="temp text-start">Temperature:</p>
+                    <p id="day1wind" class="wind text-start">Wind Speed:</p>
+                    <p id="day1hum" class="humidity text-start">Humidity:</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-2">
+                  <img
+                    id="day2icon"
+                    src="./Assets/icons/cloudy.png"
+                    height="50px"
+                    width="50px"
+                    alt="..."
+                  />
+                  <!--icon-->
+                  <div class="card-body-day2">
+                    <h5 id="day2date" class="card-title test-city text-start">
+                      City
+                    </h5>
+                    <p id="day2temp" class="temp text-start">Temperature:</p>
+                    <p id="day2wind" class="wind text-start">Wind Speed:</p>
+                    <p id="day2hum" class="humidity text-start">Humidity:</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-2">
+                  <img
+                    id="day3icon"
+                    src="./Assets/icons/cloudyrain.png"
+                    height="50px"
+                    width="50px"
+                    alt="..."
+                  />
+                  <!--icon-->
+                  <div class="card-body-day3">
+                    <h5 id="day3date" class="card-title test-city text-start">
+                      City
+                    </h5>
+                    <p id="day3temp" class="temp text-start">Temperature:</p>
+                    <p id="day3wind" class="wind text-start">Wind Speed:</p>
+                    <p id="day3hum" class="humidity text-start">Humidity:</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-2">
+                  <img
+                    id="day4icon"
+                    src="./Assets/icons/cloudysnow.png"
+                    height="50px"
+                    width="50px"
+                    alt="..."
+                  />
+                  <!--icon-->
+                  <div class="card-body-day4">
+                    <h5 id="day4date" class="card-title test-city text-start">
+                      City
+                    </h5>
+                    <p id="day4temp" class="temp text-start">Temperature:</p>
+                    <p id="day4wind" class="wind text-start">Wind Speed:</p>
+                    <p id="day4hum" class="humidity text-start">Humidity:</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-2">
+                  <img
+                    id="day5icon"
+                    src="./Assets/icons/cloudylightning.png"
+                    height="50px"
+                    width="50px"
+                    alt="..."
+                  />
+                  <!--icon-->
+                  <div class="card-body-day5">
+                    <h5 id="day5date" class="card-title test-city text-start">
+                      City
+                    </h5>
+                    <p id="day5temp" class="temp text-start">Temperature:</p>
+                    <p id="day5wind" class="wind text-start">Wind Speed:</p>
+                    <p id="day5hum" class="humidity text-start">Humidity:</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar mt-5 pt-5">
+        <h3 class="text-start">LCA Weather Inc.</h3>
+      </nav>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Assets/script.js"></script>
+  </body>
+</html>
