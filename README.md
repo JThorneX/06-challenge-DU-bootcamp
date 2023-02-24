@@ -8,7 +8,7 @@ This is a website which will show you the current weather of a city and a five d
 
 Input a city into the search to see it's current weather and a five day forecast. If you search a city name that is not found you will be prompted to enter a valid city name. Here is a screenshot of the website:
 ![image](./Assets/images/Screenshot_1.png)
-Here is a link to the website:
+Here is a link to the website: https://jthornex.github.io/06-challenge-DU-bootcamp/
 
 ### API
 
